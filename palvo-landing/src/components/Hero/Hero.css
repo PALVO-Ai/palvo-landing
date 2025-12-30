@@ -1,0 +1,153 @@
+/* ========================================
+   HERO SECTION STYLES
+   ======================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  z-index: 0;
+}
+
+/* ========================================
+   CONTENT LAYOUT
+   ======================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================================
+   TEXT AREA - CLICKABLE
+   ======================================== */
+
+.text-area-clickable {
+  position: relative;
+  z-index: 10;
+}
+
+.text-area-clickable:hover {
+  /* Subtle feedback on hover */
+}
+
+.text-area-clickable::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: transparent;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.text-area-clickable:active::before {
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* ========================================
+   DEVICE - EMERGING EFFECT
+   ======================================== */
+
+.hero-device {
+  position: relative;
+  z-index: 5;
+}
+
+/* Fade gradient at bottom to create "emerging" illusion */
+.hero-device::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(to top, #000000 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* ========================================
+   BADGE ANIMATIONS
+   ======================================== */
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-content {
+    padding-top: 60px;
+  }
+
+  .text-area-clickable {
+    flex-direction: column;
+    gap: 0 !important;
+    align-items: center;
+  }
+
+  .hero-device {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-device {
+    transform: scale(0.6);
+  }
+}

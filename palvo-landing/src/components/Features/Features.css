@@ -1,0 +1,395 @@
+/* ========================================
+   FEATURES SECTION
+   ======================================== */
+
+.features-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+  padding: 100px 60px 0;
+  overflow: hidden;
+}
+
+/* ========================================
+   TOP ROW - Features & Price
+   ======================================== */
+
+.features-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  gap: 40px;
+}
+
+/* Features List */
+.features-list {
+  display: flex;
+  gap: 60px;
+}
+
+.feature-item {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.4;
+  max-width: 130px;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.price-amount {
+  font-size: 80px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.price-currency {
+  font-size: 26px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.buy-button {
+  padding: 18px 42px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+}
+
+.buy-button:hover {
+  transform: scale(1.15);
+  padding: 22px 50px;
+  font-size: 22px;
+  box-shadow: 0 15px 50px rgba(139, 92, 246, 0.5);
+}
+
+/* ========================================
+   POWERED BY SECTION
+   ======================================== */
+
+.powered-section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.powered-text {
+  font-size: clamp(50px, 10vw, 120px);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+.powered-subtext {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.keynote-button {
+  padding: 22px 60px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+}
+
+.keynote-button:hover {
+  transform: scale(1.15);
+  padding: 26px 70px;
+  font-size: 24px;
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.5);
+}
+
+/* ========================================
+   DEVICE DISPLAY
+   ======================================== */
+
+.device-display {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  padding-bottom: 100px;
+}
+
+/* ========================================
+   PENDANT DEVICE
+   ======================================== */
+
+.pendant-device {
+  position: relative;
+  cursor: pointer;
+}
+
+.pendant-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 800px;
+  filter: blur(100px);
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.pendant-body {
+  position: relative;
+  width: 300px;
+  height: 620px;
+  border-radius: 150px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 15%, #e8e8e8 40%, #d0d0d0 70%, #b8b8b8 100%);
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s ease;
+}
+
+.pendant-gloss {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  width: 30%;
+  height: 94%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 40%, transparent 100%);
+  border-radius: 150px 0 0 150px;
+  pointer-events: none;
+}
+
+.pendant-gloss-top {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 12%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, transparent 100%);
+  border-radius: 150px 150px 50% 50%;
+  pointer-events: none;
+}
+
+.pendant-inner {
+  position: absolute;
+  top: 55px;
+  left: 40px;
+  right: 40px;
+  bottom: 55px;
+  border-radius: 110px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 40%, #000000 100%);
+  box-shadow: inset 0 10px 50px rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pendant-inner-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+/* Voice Waves Animation */
+.voice-waves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  height: 60px;
+}
+
+.voice-wave {
+  width: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  animation: voiceWave 1.2s ease-in-out infinite;
+  transition: background-color 0.3s ease;
+}
+
+.voice-wave:nth-child(1) { height: 20px; }
+.voice-wave:nth-child(2) { height: 35px; }
+.voice-wave:nth-child(3) { height: 50px; }
+.voice-wave:nth-child(4) { height: 35px; }
+.voice-wave:nth-child(5) { height: 20px; }
+
+@keyframes voiceWave {
+  0%, 100% {
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.pendant-letter {
+  font-size: 110px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  transition: all 0.6s ease;
+}
+
+.pendant-indicator {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 6px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.pendant-shadow {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  filter: blur(50px);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+/* ========================================
+   FLOOR GRADIENT
+   ======================================== */
+
+.floor-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(30, 58, 138, 0.25) 50%,
+    rgba(59, 130, 246, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .features-top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .features-list {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 80px 30px 0;
+  }
+
+  .features-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .features-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .price-section {
+    flex-direction: column;
+  }
+
+  .price-amount {
+    font-size: 60px;
+  }
+
+  .pendant-body {
+    width: 220px;
+    height: 460px;
+  }
+
+  .pendant-inner {
+    top: 40px;
+    left: 30px;
+    right: 30px;
+    bottom: 40px;
+    border-radius: 80px;
+  }
+
+  .pendant-letter {
+    font-size: 80px;
+  }
+
+  .device-display {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pendant-body {
+    width: 180px;
+    height: 380px;
+    border-radius: 90px;
+  }
+
+  .pendant-inner {
+    top: 30px;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+    border-radius: 65px;
+  }
+
+  .pendant-letter {
+    font-size: 60px;
+  }
+
+  .voice-waves {
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .voice-wave {
+    width: 4px;
+  }
+}
