@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Create from './components/Create';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
+
+  // Shared accent color for consistency
+  const accentColor = '#8B5CF6';
 
   const navItems = [
     { label: 'p1', badge: 'new', showDot: true, href: '/product' },
@@ -27,23 +31,37 @@ function App() {
         navItems={navItems}
         cartCount={cartCount}
         onCartClick={handleCartClick}
-        backgroundColor="#8B5CF6"
+        backgroundColor={accentColor}
       />
 
       {/* Hero Section */}
       <Hero 
-        brandText="p a l v o"
+        brandText="palvo P1"
         discount="25%"
         discountLabel="save"
         dateRange="12/10 - 12/31"
-        accentColor="#8B5CF6"
+        accentColor={accentColor}
       />
 
-      {/* Features Section - Scrolls into view */}
+      {/* Features Section */}
       <Features 
-        accentColor="#8B5CF6"
+        accentColor={accentColor}
         price="$49"
         currency="USD"
+      />
+
+      {/* Create Section - AI Note Taking */}
+      <Create 
+        accentColor={accentColor}
+        heading="a new way to create"
+        subtext={{
+          line1: 'turn any thought, idea, or conversation you can imagine',
+          line2: 'into AI-powered notes',
+          highlight: 'made just for you on palvo.',
+        }}
+        showcaseImage="/images/palvo-showcase.png"
+        showParticles={true}
+        showGlows={true}
       />
     </div>
   );
